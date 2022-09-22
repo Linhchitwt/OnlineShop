@@ -82,3 +82,5 @@ D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\EntityFramewo
 D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\Models.pdb
 D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\Models.dll.config
 D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\Desktop\code web\OnlineShop\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
