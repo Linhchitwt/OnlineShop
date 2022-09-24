@@ -13,6 +13,8 @@ namespace Models.Framework
         }
 
         public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,6 +25,26 @@ namespace Models.Framework
             modelBuilder.Entity<ACCOUNT>()
                 .Property(e => e.PassWord)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Category>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Category>()
+                .Property(e => e.Alias)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Alias)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
         }
     }
 }
