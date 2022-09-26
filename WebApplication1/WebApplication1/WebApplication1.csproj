@@ -2017,6 +2017,7 @@
     <Content Include="Areas\Admin\Views\Shared\_LeftMenu.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2044,6 +2045,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Product\" />
     <Folder Include="Areas\Grid\Data\" />
     <Folder Include="Areas\Grid\Views\Shared\" />
     <Folder Include="Models\" />

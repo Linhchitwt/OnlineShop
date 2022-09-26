@@ -1,4 +1,5 @@
 ﻿using Models;
+using Models.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         }
 
         // GET: Admin/Category/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -31,13 +33,24 @@ namespace WebApplication1.Areas.Admin.Controllers
 
         // POST: Admin/Category/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Category collection)
         {
             try
             {
                 // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var model = new CategoryModel();
+                    int res = model.Create(collection.ID,collection.Name, collection.Alias, collection.ParentID, collection.Order, collection.Status);
+                    if (res == 1)
+                        return RedirectToAction("Index");
+                    else
+                    {
+                        ModelState.AddModelError("", "Unsuccessfully");
+                    }
+                }
+                return View(collection);
             }
             catch
             {
